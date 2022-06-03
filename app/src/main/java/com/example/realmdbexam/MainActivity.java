@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /**
+         *  이 함수는 액티비티가 실행될때 호출되는 함수입니다.
+         *
+         */
+
         mEmail = findViewById(R.id.email_edit);
         mPassword = findViewById(R.id.password_edit);
         mNewPassword = findViewById(R.id.new_password_edit);
@@ -52,9 +57,9 @@ public class MainActivity extends AppCompatActivity implements RealmChangeListen
                 .equalTo("password", password)
                 .findFirst();
         if (user != null) {
-            Toast.makeText(this, " 성공", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " 성공", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "실패", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "실패", Toast.LENGTH_LONG).show();
         }
     }
     //회원가입
